@@ -3,7 +3,7 @@ export function multiply(a: number, b: number): Promise<number> {
 }
 
 import InputScreen from './components//input';
-import { add, selectInputState } from './redux/inputSlice';
+import rootReducer, { add, selectInputState } from './redux/inputSlice';
 import { store } from './redux/store';
 
-export { InputScreen, add, selectInputState, store };
+export { InputScreen, add, rootReducer, selectInputState, store };

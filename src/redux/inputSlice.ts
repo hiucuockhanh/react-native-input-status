@@ -6,35 +6,44 @@ export type Input = {
   icon: string;
 };
 
-// export type InputState = {
-//   inputStates: Input[];
-// };
-
-// const initialState: InputState = {
-//   inputStates: [],
-// };
-
 export type InputState = {
-  status: string | null;
-  icon: string | null;
+  inputStates: Input[];
 };
 
 const initialState: InputState = {
-  status: null,
-  icon: null,
+  inputStates: [
+    {
+      status: 'Happy',
+      icon: '😀',
+    },
+    {
+      status: 'Care',
+      icon: '😘,',
+    },
+  ],
 };
+
+// export type InputState = {
+//   status: string | null;
+//   icon: string | null;
+// };
+
+// const initialState: InputState = {
+//   status: null,
+//   icon: null,
+// };
 
 const inputSlice = createSlice({
   name: 'input',
   initialState,
   reducers: {
-    // add: (state, action: PayloadAction<Input>) => {
-    //   state.inputStates.push(action.payload);
-    // },
-    add: (state, action: PayloadAction<{ status: string; icon: string }>) => {
-      state.status = action.payload.status;
-      state.icon = action.payload.icon;
+    add: (state, action: PayloadAction<Input>) => {
+      state.inputStates.push(action.payload);
     },
+    // add: (state, action: PayloadAction<{ status: string; icon: string }>) => {
+    //   state.status = action.payload.status;
+    //   state.icon = action.payload.icon;
+    // },
   },
 });
 
