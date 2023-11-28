@@ -1,5 +1,5 @@
 {
-  "name": "react-native-input-status",
+  "name": "@hiucuockhanh/react-native-input-status",
   "version": "0.1.0",
   "description": "Input status",
   "main": "lib/commonjs/index",
@@ -68,7 +68,7 @@
     "react-native": "0.72.6",
     "react-native-builder-bob": "^0.20.0",
     "release-it": "^15.0.0",
-    "typescript": "^5.0.2"
+    "typescript": "5.0.2"
   },
   "resolutions": {
     "@types/react": "17.0.21"
@@ -156,5 +156,9 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "react-redux": "^8.1.3"
   }
 }
